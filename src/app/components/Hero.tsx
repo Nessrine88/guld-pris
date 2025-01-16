@@ -40,7 +40,7 @@ const Hero = () => {
 
           {/* Price Tables */}
           <div className="w-full  md:px-0 py-10">
-          <div className="grid grid-cols-1 p-5 md:grid-cols-2 gap-14">
+          <div className="grid grid-cols-1 p-5 md:grid-cols-1 lg:grid-cols-2  gap-14">
               <PriceTable />
               <PriceTable />
               <PriceTable />
