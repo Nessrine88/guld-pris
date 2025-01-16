@@ -7,6 +7,8 @@ import FeaturedCoins from './FeaturedCoins';
 import BuyGold from './BuyGold';
 import PriceDynamics from './PriceDynamics';
 import ShopByCategory from './ShopByCategory';
+import GoldForBeginner from './GoldForBeginner';
+import Footer from './Footer';
 
 const Hero = () => {
   return (
@@ -53,7 +55,8 @@ const Hero = () => {
       <FeaturedCoins />
       <BuyGold />
       <PriceDynamics />
-      <ShopByCategory />
+      <GoldForBeginner />
+      <Footer />
     </div>
   );
 };
