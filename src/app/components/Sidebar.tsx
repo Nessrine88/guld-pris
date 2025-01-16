@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div className='my-20 mr-10 hidden md:block'>
       <div className='py-10'>
-      <div className=' flex items-center '>
+      <div className=' flex items-center space-x-2'>
 <div className='bg-[#F8EBCB] rounded-full p-2 my-5' >
 <LiaCoinsSolid />
 </div>
