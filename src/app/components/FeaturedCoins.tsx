@@ -34,7 +34,7 @@ const products: Product[] = [
     name: 'Royal Arms',
     price: 298.92,
     image: '/coins/royal-arms.png'
-  }
+  },
 ]
 
 export default function FeaturedCoins() {
@@ -93,7 +93,7 @@ export default function FeaturedCoins() {
            <FaArrowLeftLong />
           </button>
 
-          <div className="overflow-hidden" ref={emblaRef}>
+          <div className="overflow-hidden flex justify-around" ref={emblaRef}>
             <div className="flex gap-6">
               {products.map((product) => (
                 <div
@@ -101,7 +101,7 @@ export default function FeaturedCoins() {
                   className="flex-[0_0_280px] min-w-0"
                 >
                   <div className="bg-gray-50 p-8 rounded-lg text-center">
-                    <div className="relative w-36 h-36 mx-auto mb-4">
+                    <div className="relative w-52 h-52 mx-auto mb-4">
                       <Image
                         src="/coin.png"
                         alt="coin"
