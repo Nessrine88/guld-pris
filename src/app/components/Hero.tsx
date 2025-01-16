@@ -23,7 +23,7 @@ const Hero = () => {
           <h1 className="mt-20 font-inter text-[#181515] font-600 text-[42px] flex flex-wrap">
             Denmark’s No. 1 Gold Comparison Portal
           </h1>
-          <div className="flex items-center bg-[#F8F8F8] p-5 space-x-5  w-full">
+          <div className="flex items-center bg-[#F8F8F8] p-2 space-x-5  w-full">
             <p className="text-[12px]">I want to see prices for:</p>
             <div className="flex items-center space-x-3">
               <p className="text-[12px]">Buying</p>
