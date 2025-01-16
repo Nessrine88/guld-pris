@@ -19,7 +19,7 @@ const Hero = () => {
       {/* Hero Section */}
       <div className="flex container mx-auto p-0">
         <Sidebar />
-        <div className="flex-1 ">
+        <div className="flex-1 p-5">
           <h1 className="mt-20 font-inter text-[#181515] font-600 text-[42px] flex flex-wrap">
             Denmark’s No. 1 Gold Comparison Portal
           </h1>
@@ -40,7 +40,7 @@ const Hero = () => {
 
           {/* Price Tables */}
           <div className="w-full  md:px-0 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+          <div className="grid grid-cols-1 p-5 md:grid-cols-2 gap-14">
               <PriceTable />
               <PriceTable />
               <PriceTable />
