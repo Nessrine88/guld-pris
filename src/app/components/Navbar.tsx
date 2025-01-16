@@ -106,9 +106,8 @@ const Navbar = () => {
               </Button>
               <Button variant="ghost" size="sm" className="gap-2">
                 <Crown className="h-4 w-4" />
-                Premium List
+                Gold Dealers
               </Button>
-              <Button variant="default" size="sm">Button</Button>
             </div>
           </div>
         </div>
