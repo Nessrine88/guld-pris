@@ -63,12 +63,12 @@ export default function PriceDynamics() {
           </button>
         </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-gray-900">€ 298.92</span>
+        <div className="md:flex items-center gap-2">
+          <span className="md:text-2xl font-bold text-gray-900 text-sm">€ 298.92</span>
           <span className="text-sm text-red-500">-0.8%</span>
         </div>
 
-        <div className="flex gap-2">
+        <div className="md:flex gap-2 text-sm">
           {['1D', '1M', '1Y'].map((timeframe) => (
             <button
               key={timeframe}
