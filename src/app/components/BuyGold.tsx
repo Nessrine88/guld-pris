@@ -11,7 +11,7 @@ const BuyGold = () => {
   };
 
   const sections = [
-    { title: 'Extensive Advise & Tips', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.' },
+    { title: 'Extensive Advise & Tips', description: ' Suspendisse varius enim in eros elementum tristique.' },
     { title: 'Another Section', description: 'Description for another section.' },
     { title: 'Third Section', description: 'Description for the third section.' },
   ];
@@ -43,9 +43,9 @@ const BuyGold = () => {
               <div key={index} className="w-full m-auto">
                 <div
                   className={`flex items-center group ${activeIndex === index ? 'hover:text-[#EAC463]' : ''}`}
-                  onClick={() => toggleActive(index)} 
+                  onClick={() => toggleActive(index)} // Pass the index to toggleActive
                 >
-                  <div className={`border-b-2 w-52 space-x-3 mr-3 ${activeIndex === index ? 'border-' : 'border-black'}`}></div>
+                  <div className={`border-b-2 w-52 space-x-3 mr-3 ${activeIndex === index ? 'border-[#EAC463]' : 'border-black'}`}></div>
                   <div className={`bg-primary/10 rounded-full p-3 mt-1 text-center flex justify-center w-fit ${activeIndex === index ? 'bg-[#EAC463]' : ''}`}>
                     <LuBriefcaseBusiness className={`group-hover:text-white ${activeIndex === index ? 'text-white' : ''}`} />
                   </div>
