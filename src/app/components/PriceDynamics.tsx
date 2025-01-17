@@ -36,7 +36,7 @@ export default function PriceDynamics() {
   }).join(' ')
 
   return (
-    <div className='bg-black p-10  mx-5 rounded-xl my-10'>
+    <div className='bg-black p-10  mx-5 rounded-xl my-10 md:container md:m-auto md:mb-16'>
         <h2 className='text-white'>Price Dynamics</h2>
     <div className="bg-white rounded-lg p-6 container mx-auto my-3">
       <div className="flex justify-between items-center mb-6">

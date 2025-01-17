@@ -24,7 +24,7 @@ const pricesSet2 = ["$298.92", "$500"];
       <Navbar />
 
       {/* Hero Section */}
-      <div className="flex  mx-5 ">
+      <div className="flex md:container md:m-auto  mx-5 ">
         <Sidebar />
         <div className="flex-1 ">
           <h1 className="md:mt-20 my-3  font-inter text-[#181515] font-600 md:text-[42px] text-xlvflex flex-wrap">
