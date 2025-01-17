@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Links Grid */}
-          <div className="flex-1">
+          <div className="flex-1 max-w-[50%] overflow-hidden">
             {/* Top Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
               <div>
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-t border-gray-800">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-t border-gray-800  ">
               <div>
                 <h5 className="font-semibold mb-4">Top Gold Coins</h5>
                 <ul className="space-y-2 text-[#DED9D6]">

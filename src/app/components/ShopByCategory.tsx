@@ -7,7 +7,7 @@ import { ArrowRight,Calculator, Coins, Square } from 'lucide-react'
 
 export default function ShopByCategory() {
   return (
-    <div className='container mx-auto'>
+    <div className=' mx-5'>
       {/* Shop By Category Section */}
       <div className="">
         <div className=" mx-auto text-center mb-16">

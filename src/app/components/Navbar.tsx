@@ -80,7 +80,7 @@ const Navbar = () => {
       <div className='hidden md:block'>
         <div className="border-b bg-[#181515] text-white py-4">
           <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-wrap md:flex-nowrap space-x-5 mb-4 md:mb-0">
+            <div className="flex flex-wrap md:flex-nowrap space-x-5 mb-4 md:mb-0  max-w-[30%] overflow-hidden">
               <div className="border-r pr-3 font-bold">
                 <p>Guld</p>
                 <p>Solv</p>
@@ -95,7 +95,7 @@ const Navbar = () => {
             <div className="text-center mb-4 md:mb-0">
               <Link href="#" className="font-bold text-[25px]">Guldpris</Link>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 ">
               <Button variant="ghost" size="sm" className="gap-2">
                 <Calculator className="h-4 w-4" />
                 Calculator

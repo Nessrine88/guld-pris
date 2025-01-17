@@ -5,8 +5,8 @@ export default function GoldForBeginner() {
   return (
     <div>
      {/* Gold For Beginners Section */}
-     <section className="py-16 bg-gray-50  mx-auto">
-          <div className="bg-[#181515] rounded-2xl w-full container">
+     <section className="mb-10 mx-5">
+          <div className="bg-[#181515] rounded-2xl w-full ">
             <div className="grid md:grid-cols-2 gap-8 p-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Gold For Beginners</h2>
