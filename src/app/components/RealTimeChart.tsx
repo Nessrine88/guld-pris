@@ -1,68 +1,47 @@
-"use client"
-import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-import { useState, useEffect } from 'react';
+"use client";
 
-// Register required components
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+import { Area, AreaChart, XAxis, YAxis, ResponsiveContainer } from "recharts";
 
-const RealTimeChart = () => {
-  const [data, setData] = useState({
-    labels: [] as string[],
-    datasets: [
-      {
-        label: 'Real-Time Data',
-        data: [] as number[],
-        fill: false,
-        backgroundColor: 'orange',
-        borderColor: 'rgba(75, 192, 192, 0.2)',
-        tension: 0.4,
-        pointBackgroundColor: [] as string[],
-        pointBorderColor: [] as string[],
-      },
-    ],
-  });
+interface RealTimeChartProps {
+  data: { date: string; value: number }[];
+  gradientId: string;
+  strokeColor: string;
+}
 
-  const options = {
-    maintainAspectRatio: false,
-    responsive: true,
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const newData = Math.floor(Math.random() * 100);
-      setData((prevData) => {
-        const updatedData = [...prevData.datasets[0].data, newData];
-        const updatedLabels = [...prevData.labels];
-        
-        const goldenValue = 50;
-        const newPointBackgroundColor = newData === goldenValue ? 'gold' : 'rgb(75, 192, 192)';
-        const newPointBorderColor = newData === goldenValue ? 'orange' : 'rgba(75, 192, 192, 0.2)';
-
-        const updatedPointBackgroundColor = [...prevData.datasets[0].pointBackgroundColor, newPointBackgroundColor];
-        const updatedPointBorderColor = [...prevData.datasets[0].pointBorderColor, newPointBorderColor];
-
-        return {
-          ...prevData,
-          labels: updatedLabels,
-          datasets: [
-            {
-              ...prevData.datasets[0],
-              data: updatedData,
-              pointBackgroundColor: updatedPointBackgroundColor,
-              pointBorderColor: updatedPointBorderColor,
-            },
-          ],
-        };
-      });
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
+const RealTimeChart: React.FC<RealTimeChartProps> = ({ data, gradientId, strokeColor }) => {
   return (
-    <div style={{ width: '300px', height: '300px',background:'#F8F8F8' }}>
-      <Line data={data} options={options} />
+    <div className="h-[200px] w-full ">
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart data={data}>
+          <defs>
+            <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={strokeColor} stopOpacity={0.8} />
+              <stop offset="95%" stopColor={strokeColor} stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <XAxis
+            dataKey="date"
+            axisLine={false}
+            tickLine={false}
+            tick={{ fontSize: 12 }}
+            domain={[2, 'auto']}
+          />
+          <YAxis
+            axisLine={false}
+            tickLine={false}
+            tick={{ fontSize: 12 }}
+            domain={[0, 'auto']} // Starts from 0 for Y-axis
+            ticks={[0, 2000, 4000, 6000, 8000]} // Ticks as numbers
+            tickFormatter={(value) => `${value === 0 ? '0' : value / 1000 + 'k'}`}
+          />
+          <Area
+            type="monotone"
+            dataKey="value"
+            stroke={strokeColor}
+            fill={`url(#${gradientId})`}
+          />
+        </AreaChart>
+      </ResponsiveContainer>
     </div>
   );
 };

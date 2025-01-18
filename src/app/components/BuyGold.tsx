@@ -40,13 +40,13 @@ const BuyGold = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {sections.map((section, index) => (
-              <div key={index} className="w-full m-auto">
+              <div key={index} className="w-full m-auto md:container md:px-4">
                 <div
                   className={`flex items-center group ${activeIndex === index ? 'hover:text-[#EAC463]' : ''}`}
-                  onClick={() => toggleActive(index)} // Pass the index to toggleActive
+                  onClick={() => toggleActive(index)}
                 >
                   <div className={`border-b-2 w-52 space-x-3 mr-3 ${activeIndex === index ? 'border-[#EAC463]' : 'border-black'}`}></div>
-                  <div className={`bg-primary/10 rounded-full p-3 mt-1 text-center flex justify-center w-fit ${activeIndex === index ? 'bg-[#EAC463]' : ''}`}>
+                  <div className={`bg-primary/10 rounded-full p-3 mt-1 text-center flex justify-center w-fit ${activeIndex === index ? 'bg-yellow-500' : ''}`}>
                     <LuBriefcaseBusiness className={`group-hover:text-white ${activeIndex === index ? 'text-white' : ''}`} />
                   </div>
                   <div className={`border-b-2 w-52 space-x-3 ml-3 ${activeIndex === index ? 'border-[#EAC463]' : 'border-black'}`}></div>

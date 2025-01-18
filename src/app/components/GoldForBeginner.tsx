@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function GoldForBeginner() {
   return (
-    <div>
+    <div className='md:mx-5'>
      {/* Gold For Beginners Section */}
      <section className="mb-10 mx-5 md:container md:m-auto md:mb-16 md:p-0">
           <div className="bg-[#181515] rounded-2xl w-full ">
